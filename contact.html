@@ -63,15 +63,18 @@
         <textarea id="message" name="message" required></textarea>
     </div>
     <button class="submit-btn" onclick="submitForm()">Submit</button>
-    <div id="thank-you-msg" style="display: none; color: black; margin-top: 10px;">Thank you for your submission!</div>
+    <div id="thank-you-msg">Thanks for reaching out!</div>
 	</div>
 </div>
 
 <script>
-    function submitForm() {
-        document.getElementById('contact-form').style.display = 'none';
-        document.getElementById('thank-you-msg').style.display = 'block';
-    }
+function submitForm() {
+    document.getElementById('thank-you-msg').style.display = 'block';
+    
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+}
 </script>
 
 </body>
